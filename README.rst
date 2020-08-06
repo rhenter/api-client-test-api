@@ -22,14 +22,16 @@ Usando Virtualenv Wrapper
 
 .. code-block:: shell
 
-    $ git clone git@bitbucket.org:rhenter/bookstore-api.git
+    $ git clone git@github.com:rhenter/api-client-test-api.git
     $ cd bookstore-api
     $ mkvirtualenv -p $(which python) bookstore_api
     $ workon bookstore_api
 
 Usando pyenv virtualenv
 
-    $ git clone git@bitbucket.org:rhenter/bookstore-api.git
+.. code-block:: shell
+
+    $ git clone git@github.com:rhenter/api-client-test-api.git
     $ cd bookstore-api
     $ pyenv virtualenv bookstore_api
     $ pyenv activate bookstore_api
