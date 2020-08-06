@@ -1,0 +1,379 @@
+<html>
+  <head>
+    <title>Sandbox</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        font-family: "Open Sans" !important;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .left {
+        flex: 1;
+        background-color: #f7f6fb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        border: 1px solid #ebe9f1;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07);
+      }
+
+      .line {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .inpt {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input[type="checkbox"] {
+        height: 20px !important;
+      }
+
+      input[type="color"] {
+        padding: 0px !important;
+        border-radius: 10px !important;
+        width: 190px !important;
+      }
+
+      input[type="color"]::-webkit-color-swatch {
+        border: none;
+        border-radius: 10px;
+        padding: 0;
+      }
+
+      input[type="color"]::-webkit-color-swatch-wrapper {
+        border: none;
+        border-radius: 10px;
+        padding: 0;
+      }
+
+      .left label {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 5px;
+
+        color: #424a60;
+      }
+
+      .left input {
+        background: #ffffff;
+        border: 1.5px solid #d4d4d4;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 8px;
+        height: 40px;
+        max-width: 200px;
+      }
+
+      .left .color-input {
+        display: flex;
+      }
+
+      .left .color-input input {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-right: 0px;
+        width: 146px;
+      }
+
+      .left .color-box {
+        width: 40px;
+        background-color: white;
+        border: 1.5px solid #d4d4d4;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .left input::placeholder {
+        font-family: "ubuntu";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+        /* identical to box height */
+
+        color: #c4c4c4;
+      }
+
+      .left h1 {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+
+        color: #2a2a2c;
+      }
+
+      .left .submit {
+        background: linear-gradient(270deg, #f7941f 0%, #d91a5d 101.42%);
+        border-radius: 10px;
+        border: 0px;
+        color: white;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 20px;
+        max-width: 100%;
+        cursor: pointer;
+
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #ffffff;
+      }
+
+      .right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .right .simulator {
+        background-image: url(https://sandbox.partiu.com.br/enterprise/img/iphone-6-portrait.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 700px;
+        width: 300px;
+        padding: 126px 16px 145px 16px;
+        box-sizing: border-box;
+      }
+
+      .right .simulator .logo {
+        background-image: url(https://www.partiuvantagens.com.br/img/logo.png);
+        background-size: 110px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 35px;
+        margin-bottom: 20px;
+        padding-top: 20px;
+      }
+
+      .right .simulator .search {
+        background: #f7f6fb;
+        border-radius: 10px;
+        width: 90%;
+        padding: 10px 32px;
+        box-sizing: border-box;
+        margin: auto;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+
+        color: #979797;
+      }
+
+      .container {
+        height: 100%;
+        overflow-y: scroll;
+      }
+
+      .container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tags {
+        display: flex;
+        white-space: nowrap;
+        overflow-x: scroll;
+        width: 95%;
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 5%;
+        padding-right: 5px;
+        box-sizing: border-box;
+      }
+
+      .tags::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tag {
+        background: #f7f6fb;
+        border-radius: 7px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 10px;
+        padding: 10px 10px;
+        margin-right: 10px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+
+        color: #979797;
+      }
+
+      .primary-color {
+        color: #f7941f;
+      }
+
+      .menu-background {
+        background-color: "white";
+      }
+
+      .menu-color {
+        color: white;
+      }
+
+      .terciary-background {
+        background-color: #e8d1f2;
+      }
+
+      .secondary-background {
+        background-color: #f7d1df;
+      }
+
+      .secondary-color {
+        color: #d91a5d;
+      }
+
+      .terciary-color {
+        color: #ad00ff;
+      }
+
+      .primary-background {
+        background-color: #fdead2;
+      }
+
+      .subchoices {
+        margin-bottom: 20px;
+        font-family: "Open Sans";
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        font-weight: 500;
+        padding: 10px 0px;
+        font-size: 10px;
+        line-height: 14px;
+        justify-content: space-evenly;
+      }
+
+      .promotions {
+        width: 90%;
+        margin: auto;
+      }
+
+      .promotion {
+        border-radius: 10px;
+        text-align: center;
+        padding-bottom: 5px;
+        font-family: "Open Sans";
+        margin-bottom: 20px;
+      }
+
+      .promotion .bottom {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+      .inside {
+        text-align: left;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        padding: 5px 0px;
+        border: 1px solid #ebe9f1;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-2px);
+      }
+
+      .inside .exclusive {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 8px;
+        line-height: 10px;
+        align-self: baseline;
+        margin-right: 10px;
+        margin-top: 2px;
+      }
+
+      .inside img {
+        flex: 1;
+        margin-right: 10px;
+        width: 40px;
+      }
+
+      .inside .data {
+        flex: 2;
+      }
+
+      .inside .data h1 {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 10px;
+        /* identical to box height */
+
+        color: #2a2a2c;
+      }
+
+      .inside .data p {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 10px;
+        /* identical to box height, or 100% */
+
+        color: #979797;
+      }
+
+      .inside .exclusive {
+        flex: 1;
+        border-radius: 5px;
+        text-align: center;
+        padding: 2px;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">{% block left %} {% endblock %}</div>
+    <div class="right">{% block right %} {% endblock %}</div>
+  </body>
+</html>
